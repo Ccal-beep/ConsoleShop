@@ -14,7 +14,7 @@ public class Test {
         String password = sc.next();
         System.out.println("输入的密码是：" + password);
 
-        File file=new File("C:\\Users\\lenovo\\IdeaProjects\\ConloseShop\\src\\shuju.xlsx");
+        File file=new File("C:\\Users\\lenovo\\Desktop\\ConsoleShop\\src\\shuju.xlsx");
         ReadExcel readExcel=new ReadExcel();
         User users[]=readExcel.readExcel(file);
         for(int i=0;i<users.length;i++){
