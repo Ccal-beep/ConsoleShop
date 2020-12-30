@@ -86,14 +86,25 @@ public class Test {
 
                         }
                         if (choose == 2) {
-                            for (int a = 0; a < carts.length; a++) {
+                            for(Product p:carts){
+
+                                if(p!=null){
+
+                                    System.out.print("\t"+p.getPID());
+                                    System.out.print("\t"+p.getPname());
+                                    System.out.print("\t"+p.getPcost());
+                                    System.out.println("\t"+p.getPdescri());
+
+                                }
+                            }
+                           /* for (int a = 0; a < carts.length; a++) {
                                 if (carts[a] != null) {
                                     System.out.print("\t" + carts[a].getPID());
                                     System.out.print("\t" + carts[a].getPname());
                                     System.out.print("\t" + carts[a].getPcost());
                                     System.out.println("\t" + carts[a].getPdescri());
                                 }
-                            }
+                            }*/
 
                         }
                         if(choose==3)
