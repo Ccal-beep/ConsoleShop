@@ -19,25 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcdb1c9f-0499-4d4c-99b0-11367ef00d23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/Products.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/ReadProductExcel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/ReadProductExcel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/ReadUserExcel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/ReadUserExcel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConloseShop/shuju.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Products.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReadProductExcel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReadExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadUserExcel.java" afterDir="false" />
+    <list default="true" id="fcdb1c9f-0499-4d4c-99b0-11367ef00d23" name="Default Changelist" comment="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReadProductExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadProductsExcel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,11 +66,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\13222\Desktop\ConsoleShop\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager">
@@ -128,8 +113,18 @@
       <workItem from="1609167887753" duration="50000" />
       <workItem from="1609168004661" duration="138000" />
       <workItem from="1609168198865" duration="215000" />
-      <workItem from="1609168455724" duration="3268000" />
+      <workItem from="1609168455724" duration="3556000" />
+      <workItem from="1609312162034" duration="1077000" />
+      <workItem from="1609313341565" duration="6302000" />
     </task>
+    <task id="LOCAL-00001" summary="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。">
+      <created>1609171801322</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609171801322</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,52 +143,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="511" y="247" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1609167866622">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="511" y="247" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.824@0.0.1536.824" timestamp="1609167866622" />
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1609168604519">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1609168604519" />
-    <state x="590" y="106" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1609169473799">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="590" y="106" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1536.824@0.0.1536.824" timestamp="1609169473799" />
-    <state x="183" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609166069624">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="183" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1609166069624" />
-    <state x="549" y="96" key="FileChooserDialogImpl" timestamp="1609171301920">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="96" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609171301920" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1609171291420">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609171291420" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1609171291420">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609171291420" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1609171291420">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609171291420" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1609171291420">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609171291420" />
-    <state x="78" y="52" key="SettingsEditor" timestamp="1609171380580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="78" y="52" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1609171380580" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609169581658">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609169581658" />
+    <MESSAGE value="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。" />
   </component>
 </project>
