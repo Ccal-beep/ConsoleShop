@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcdb1c9f-0499-4d4c-99b0-11367ef00d23" name="Default Changelist" comment="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。">
+    <list default="true" id="fcdb1c9f-0499-4d4c-99b0-11367ef00d23" name="Default Changelist" comment="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。&#10;4、抽取购物的方法；&#10;5；抽取购物车方法；">
+      <change afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ConloseShop/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ConloseShop/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
@@ -141,13 +142,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,7 +184,8 @@
       <workItem from="1609313341565" duration="6302000" />
       <workItem from="1609328091691" duration="1713000" />
       <workItem from="1609332692112" duration="18000" />
-      <workItem from="1610766788709" duration="6516000" />
+      <workItem from="1610766788709" duration="10829000" />
+      <workItem from="1610780388603" duration="4985000" />
     </task>
     <task id="LOCAL-00001" summary="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。">
       <created>1609171801322</created>
@@ -190,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609171801322</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。&#10;4、抽取购物的方法；&#10;5；抽取购物车方法；">
+      <created>1610773630537</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610773630537</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -261,21 +272,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Test.java</url>
-          <line>89</line>
-          <properties class="Test" method="viewCarts">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。&#10;4、抽取购物的方法；&#10;5；抽取购物车方法；" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、改变读取shuju.xslx的方式（getResourceAsStream）；&#10;2、用户输入密码错误，提示用户重新输入；&#10;3、登录成功显示商品信息。&#10;4、抽取购物的方法；&#10;5；抽取购物车方法；" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Test.java">

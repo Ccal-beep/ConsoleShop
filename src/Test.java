@@ -41,7 +41,7 @@ public class Test {
                     while (ba) {
                         System.out.println(("继续购物请按1"));
                         System.out.println(("查看购物车请按2"));
-                        System.out.println("退出请按3");
+                        System.out.println("结账请按3");
                         int choose = sc.nextInt();
                     /*
                     继续购物
@@ -55,7 +55,20 @@ public class Test {
                             viewCarts();
 
 
-                        }if (choose == 3)
+                        }if (choose == 3){
+                            //结账
+                            Order order=new Order();
+                            order.setUser(users[i]);
+                            order.setProducts(carts);
+                            
+
+
+
+
+
+
+
+                        }if(choose==4)
                             ba = false;
                     }
                     bo = false;
