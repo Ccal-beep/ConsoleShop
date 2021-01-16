@@ -2,9 +2,13 @@ import java.io.InputStream;
 import java.util.Scanner;
 
 public class Test {
+    static Scanner sc = new Scanner(System.in);
+    static Product carts[] = new Product[3];
+    static int count=0;
+
     public static void main(String[] args) throws ClassNotFoundException {
 
-        Scanner sc = new Scanner(System.in);
+
         boolean bo = true;
         while (bo) {
 
@@ -18,9 +22,9 @@ public class Test {
 
             //File file=new File("C:\\Users\\lenovo\\Desktop\\ConsoleShop\\src\\shuju.xlsx");
             InputStream Inuser = Class.forName("Test").getResourceAsStream("shuju.xlsx");
-            InputStream Inproduct=Class.forName("Test").getResourceAsStream("/Products.xlsx");
+            InputStream Inproduct = Class.forName("Test").getResourceAsStream("/Products.xlsx");
             ReadUserExcel readExcel = new ReadUserExcel();
-            ReadProductsExcel readProductExcel=new ReadProductsExcel();
+            ReadProductsExcel readProductExcel = new ReadProductsExcel();
             User users[] = readExcel.readExcel(Inuser);
 
             for (int i = 0; i < users.length; i++) {
@@ -31,26 +35,10 @@ public class Test {
                     显示商品
                      */
 
-                    Product products[]=readProductExcel.readExcel(Inproduct);
-                    for(Product p:products){
-                        System.out.print("\t"+p.getPID());
-                        System.out.print("\t"+p.getPname());
-                        System.out.print("\t"+p.getPcost());
-                        System.out.println("\t"+p.getPdescri());
-                    }
-                    System.out.println("请输入商品的ID加入购物车");
-                    int pid=sc.nextInt();
-                    int count=0;
-                    Product carts[]=new Product[3];
-                    Inproduct=null;
-                    Inproduct=Class.forName("Test").getResourceAsStream("/Products.xlsx");
-                    Product product=readProductExcel.getProductByID(pid,Inproduct);
-                    System.out.println(("要购买的商品的价格为：" + product.getPcost()));
-
-                    if(product!=null)
-                        carts[count++]=product;
-                    boolean ba=true;
-                    while(ba){
+                    Product products[] = readProductExcel.readExcel(Inproduct);
+                    shopping(Inproduct);
+                    boolean ba = true;
+                    while (ba) {
                         System.out.println(("继续购物请按1"));
                         System.out.println(("查看购物车请按2"));
                         System.out.println("退出请按3");
@@ -60,62 +48,21 @@ public class Test {
                      */
 
                         if (choose == 1) {
-                            Inproduct = null;
-                            Inproduct = Class.forName("Test").getResourceAsStream("/Products.xlsx");
-                            readProductExcel = new ReadProductsExcel();
-                            products = readProductExcel.readExcel(Inproduct);
-                            for (Product p : products) {
-                                System.out.print("\t" + p.getPID());
-                                System.out.print("\t" + p.getPname());
-                                System.out.print("\t" + p.getPcost());
-                                System.out.println("\t" + p.getPdescri());
-                            }
 
-                            System.out.println(("输入商品ID加入购物车："));
-                            pid = sc.nextInt();
-                            Inproduct = null;
-                            Inproduct = Class.forName("Test").getResourceAsStream("/Products.xlsx");
-                            product = readProductExcel.getProductByID(pid, Inproduct);
-                            System.out.println("要购买的商品的价格为：" + product.getPcost());
+                        shopping(Inproduct);
 
-                            if (product != null) {
-
-                                carts[count++] = product;
-                            }
+                        }if (choose == 2) {
+                            viewCarts();
 
 
-                        }
-                        if (choose == 2) {
-                            for(Product p:carts){
-
-                                if(p!=null){
-
-                                    System.out.print("\t"+p.getPID());
-                                    System.out.print("\t"+p.getPname());
-                                    System.out.print("\t"+p.getPcost());
-                                    System.out.println("\t"+p.getPdescri());
-
-                                }
-                            }
-                           /* for (int a = 0; a < carts.length; a++) {
-                                if (carts[a] != null) {
-                                    System.out.print("\t" + carts[a].getPID());
-                                    System.out.print("\t" + carts[a].getPname());
-                                    System.out.print("\t" + carts[a].getPcost());
-                                    System.out.println("\t" + carts[a].getPdescri());
-                                }
-                            }*/
-
-                        }
-                        if(choose==3)
-                            ba=false;
+                        }if (choose == 3)
+                            ba = false;
                     }
                     bo = false;
                     break;
 
 
-
-                }else {
+                } else {
                     System.out.println("登录失败");
 
                 }
@@ -124,4 +71,49 @@ public class Test {
 
 
     }
+    public static void viewCarts(){
+        for (Product p : carts) {
+
+            if (p!= null) {
+
+                System.out.print("\t" + p.getPID());
+                System.out.print("\t" + p.getPname());
+                System.out.print("\t" + p.getPcost());
+                System.out.println("\t" + p.getPdescri());
+
+            }
+        }
+
+    }
+
+
+    public static void shopping(InputStream in) throws ClassNotFoundException {
+
+        in = null;
+        in = Class.forName("Test").getResourceAsStream("/Products.xlsx");
+        ReadProductsExcel readProductExcel = new ReadProductsExcel();
+        Product products[] = readProductExcel.readExcel(in);
+        for (Product p : products) {
+
+            System.out.print("\t" + p.getPID());
+            System.out.print("\t" + p.getPname());
+            System.out.print("\t" + p.getPcost());
+            System.out.println("\t" + p.getPdescri());
+        }
+
+        System.out.println(("输入商品ID加入购物车："));
+        int pid = sc.nextInt();
+
+        in = null;
+        in = Class.forName("Test").getResourceAsStream("/Products.xlsx");
+        Product product = readProductExcel.getProductByID(pid, in);
+        System.out.println("要购买的商品的价格为：" + product.getPcost());
+
+        if (product != null) {
+
+            carts[count++] = product;
+
+        }
+    }
+
 }
